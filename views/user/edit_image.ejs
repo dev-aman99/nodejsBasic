@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="main h-full bg-zinc-900 w-full p-10 text-white">
+        <div class="flex items-center gap-[560px]"> 
+        <h1 class="text-3xl mb-5 tracking-tighter">Update</h1>  
+        </div> 
+        <form action="/profile/uploads" method="post" class="" enctype="multipart/form-data">  
+            <label class="block mb-3" for="">Old Image : <a class="text-blue-500" href="/images/uploads/<%= user.profilepic %>" target="_blank">View</a></label>
+            <input class="px-5 py-3 bg-transparent outline-none border-2 border-zinc-800 rounded-md" type="file" name="image" required placeholder="enter your password"> 
+            <input class="button px-5 py-3 bg-blue-600 outline-none rounded-md" type="submit" value="save">
+        </form>
+    </div>
+</body>
+</html>

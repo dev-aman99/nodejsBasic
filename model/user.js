@@ -7,7 +7,8 @@ const userSchema = mongoose.Schema({
     password : String,  
     post : [
         {type : mongoose.Schema.Types.ObjectId , ref : "post"}
-    ]
+    ],
+    profilepic : { type : String , default : "default_img.webp"}
 })
 
 module.exports = mongoose.model("user",userSchema);

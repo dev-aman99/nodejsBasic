@@ -10,12 +10,18 @@
     <body>
         <div class="main min-h-screen bg-zinc-900 w-full p-10 text-white">
             <div class="profile mb-5">
-                <a class="text-blue-500 mb-2" href="/logout">Logout</a>
-                <h1 class="text-3xl mb-2 tracking-tighter">Welcome
-                    <%=user.username %></h1>
-                <p class="text-lg mb-2 tracking-tighter">you can create a post
-                    here</p>
-
+                <div class=" w-full flex justify-end"> 
+                    <a class="bg-red-500  inline-block py-3 px-3 rounded-md text-sm" href="/logout">Logout</a>
+                </div>
+                <div class="flex gap-3 mb-2 items-center">
+                <div class="profile  rounded-md outline-hidden w-20 h-20"> 
+                    <a class="rounded-md" href="/profile/uploads">
+                    <img title="click to edit" class="w-full rounded-md h-full object-cover" src="/images/uploads/<%=user.profilepic %>" alt="">
+                    </a>
+                </div>
+                <h1 class="text-3xl mb-2 tracking-tighter">Welcome <%=user.username %></h1>
+                </div>
+                <p class="text-lg mb-2 tracking-tighter">you can create a post here</p> 
                 <form action="/post" method="post"
                     class="flex flex-col">
                     <textarea
